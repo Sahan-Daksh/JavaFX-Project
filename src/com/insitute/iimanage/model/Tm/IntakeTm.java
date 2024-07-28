@@ -1,26 +1,26 @@
-package com.insitute.iimanage.model;
+package com.insitute.iimanage.model.Tm;
 
+import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 
-import java.util.Date;
-
-public class Intake {
-
+public class IntakeTm {
     private String id;
     private String name;
-    private Date date;
+    private String dob;
     private String course;
     private boolean status;
+    private Button button;
 
-    public Intake() {
+    public IntakeTm() {
     }
 
-    public Intake(String id, String name, Date date, String course, boolean status, Button button) {
+    public IntakeTm(String id, String name, String dob, String course, boolean status, Button button) {
         this.id = id;
         this.name = name;
-        this.date = date;
+        this.dob = dob;
         this.course = course;
         this.status = status;
+        this.button = button;
     }
 
     public String getId() {
@@ -39,12 +39,12 @@ public class Intake {
         this.name = name;
     }
 
-    public Date getDate() {
-        return date;
+    public String getDob() {
+        return dob;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 
     public String getCourse() {
@@ -61,5 +61,13 @@ public class Intake {
 
     public void setStatus(boolean status) {
         this.status = status;
+    }
+
+    public Button getButton() {
+        return button;
+    }
+
+    public void setButton(Button button) {
+        this.button = button;
     }
 }
